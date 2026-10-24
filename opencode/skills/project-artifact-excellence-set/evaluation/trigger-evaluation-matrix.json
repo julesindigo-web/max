@@ -1,0 +1,1282 @@
+{
+  "schema_version": "1.1",
+  "as_of": "2026-10-16",
+  "evaluation_protocol": "Candidate trigger test set v2.1.0 with task-orchestrator 5+5 addition (2026-10-16) for fourteen members. Candidate trigger test set v2.0.0 with 2026-10-15 visual-family update for thirteen members. Core audit/authoring skills carry 12+12 cases including Indonesian, adversarial, and near-miss families; the five visual-family members (human-centric-visual-excellence, frontend-engineering-excellence, accessibility-inclusive-design, test-automation-engineer, fullstack-e2e-mastery) carry 12+12 cases including Indonesian, adversarial, and near-miss families; remaining domain members carry 5+5 cases. Expected labels adjudicated before execution. Runtime activation observations must be recorded separately per evaluation/runtime-protocol.md using scripts/run-trigger-evaluation.py; authored semantic review is not runtime precision/recall evidence. Minimum validator gate is 5+5 per member.",
+  "skills": {
+    "project-artifact-auditor": {
+      "positive": [
+        {
+          "id": "pa-p1",
+          "prompt": "Audit these project artifacts end to end and identify traceability gaps.",
+          "expected": "trigger"
+        },
+        {
+          "id": "pa-p2",
+          "prompt": "Review this PRD and SRS for completeness, ambiguity, and testable acceptance criteria.",
+          "expected": "trigger"
+        },
+        {
+          "id": "pa-p3",
+          "prompt": "Perform an architecture, security, and reliability audit for this full-stack service.",
+          "expected": "trigger"
+        },
+        {
+          "id": "pa-p4",
+          "prompt": "Assess usability, accessibility, and human-factors risks in this product journey.",
+          "expected": "trigger"
+        },
+        {
+          "id": "pa-p5",
+          "prompt": "Review CI/CD, observability, resilience, and production readiness for this project.",
+          "expected": "trigger"
+        },
+        {
+          "id": "pa-p6",
+          "prompt": "Do a full-stack end-to-end audit of this microservice including threat model and SLOs.",
+          "expected": "trigger"
+        },
+        {
+          "id": "pa-p7",
+          "prompt": "Gap analysis and remediation for this incomplete architecture decision record set.",
+          "expected": "trigger"
+        },
+        {
+          "id": "pa-p8",
+          "prompt": "Audit artefak proyek ini secara end-to-end dan identifikasi kesenjangan ketertelusuran.",
+          "expected": "trigger"
+        },
+        {
+          "id": "pa-p9",
+          "prompt": "Lakukan audit arsitektur, keamanan, dan keandalan untuk layanan full-stack ini beserta SLO-nya.",
+          "expected": "trigger"
+        },
+        {
+          "id": "pa-p10",
+          "prompt": "Produce a calibrated audit report with evidence states, severity bases, and a prioritized remediation backlog for this release candidate.",
+          "expected": "trigger"
+        },
+        {
+          "id": "pa-p11",
+          "prompt": "Check this API contract set for contradictions, missing error models, and backward-compatibility risks before release.",
+          "expected": "trigger"
+        },
+        {
+          "id": "pa-p12",
+          "prompt": "Evaluate cost per user journey, observability coverage, and recovery runbooks for production readiness.",
+          "expected": "trigger"
+        }
+      ],
+      "negative": [
+        {
+          "id": "pa-n1",
+          "prompt": "Explain recursion with a simple example.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "pa-n2",
+          "prompt": "Translate this paragraph into Indonesian.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "pa-n3",
+          "prompt": "What is the capital of France?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "pa-n4",
+          "prompt": "Write a basic sorting algorithm in Python.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "pa-n5",
+          "prompt": "Suggest names for a fantasy novel character.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "pa-n6",
+          "prompt": "How do I center a div in CSS?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "pa-n7",
+          "prompt": "Summarize the plot of Hamlet.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "pa-n8",
+          "prompt": "Audit my personal monthly grocery budget spreadsheet for overspending.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "pa-n9",
+          "prompt": "Review this restaurant menu for tasty options and fair prices.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "pa-n10",
+          "prompt": "Jelaskan cara membuat nasi goreng yang enak untuk makan malam.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "pa-n11",
+          "prompt": "What is the weather in Jakarta today?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "pa-n12",
+          "prompt": "Write a bedtime story about a dragon who learns to share.",
+          "expected": "no-trigger"
+        }
+      ]
+    },
+    "skills-create-excellence": {
+      "positive": [
+        {
+          "id": "sce-p1",
+          "prompt": "Create an exceptional new agent skill with measurable success metrics and tests.",
+          "expected": "trigger"
+        },
+        {
+          "id": "sce-p2",
+          "prompt": "Improve this agent specification using acceptance criteria, failure modes, and residual risks.",
+          "expected": "trigger"
+        },
+        {
+          "id": "sce-p3",
+          "prompt": "Compose these capabilities into a modular skill set with explicit contracts and a manifest.",
+          "expected": "trigger"
+        },
+        {
+          "id": "sce-p4",
+          "prompt": "Validate this SKILL.md frontmatter, metadata version, quality attributes, and regression fixtures.",
+          "expected": "trigger"
+        },
+        {
+          "id": "sce-p5",
+          "prompt": "Review positive and negative trigger prompts and improve the skill description without increasing false positives.",
+          "expected": "trigger"
+        },
+        {
+          "id": "sce-p6",
+          "prompt": "Upgrade this existing skill to excellence standard with human-factors and production readiness.",
+          "expected": "trigger"
+        },
+        {
+          "id": "sce-p7",
+          "prompt": "Generate a complete plugins set with shared contracts and validation harness.",
+          "expected": "trigger"
+        },
+        {
+          "id": "sce-p8",
+          "prompt": "Buatkan skill agen baru yang luar biasa dengan metrik keberhasilan terukur dan pengujian.",
+          "expected": "trigger"
+        },
+        {
+          "id": "sce-p9",
+          "prompt": "Tingkatkan skill ini ke standar excellence dengan human factors dan kesiapan produksi.",
+          "expected": "trigger"
+        },
+        {
+          "id": "sce-p10",
+          "prompt": "Design trigger phrases with positive and negative test sets to reach 90 percent recall and under 10 percent false positives.",
+          "expected": "trigger"
+        },
+        {
+          "id": "sce-p11",
+          "prompt": "Add a versioned skill-set manifest with dependency DAG, shared contracts, and migration notes.",
+          "expected": "trigger"
+        },
+        {
+          "id": "sce-p12",
+          "prompt": "Write an agent specification with goals, tools, memory rules, safety boundaries, and evaluation protocol.",
+          "expected": "trigger"
+        }
+      ],
+      "negative": [
+        {
+          "id": "sce-n1",
+          "prompt": "Summarize this news article in three sentences.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "sce-n2",
+          "prompt": "Explain Newton's second law of motion.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "sce-n3",
+          "prompt": "Write a CSS hover effect for a button.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "sce-n4",
+          "prompt": "Give me a simple dinner recipe using potatoes.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "sce-n5",
+          "prompt": "Translate this short Spanish paragraph into English.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "sce-n6",
+          "prompt": "What is the weather in Jakarta today?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "sce-n7",
+          "prompt": "Debug this simple JavaScript syntax error.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "sce-n8",
+          "prompt": "Create a birthday playlist with cheerful pop songs.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "sce-n9",
+          "prompt": "Buatkan resep makan malam sederhana dengan kentang dan telur.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "sce-n10",
+          "prompt": "Audit my monthly grocery receipts for total spending.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "sce-n11",
+          "prompt": "Explain how photosynthesis works in simple terms.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "sce-n12",
+          "prompt": "Fix this typo in my cover letter.",
+          "expected": "no-trigger"
+        }
+      ]
+    },
+    "code-refactoring-optimizer": {
+      "positive": [
+        {
+          "id": "cro-p1",
+          "prompt": "Refactor this God function into smaller testable modules and reduce its cyclomatic complexity.",
+          "expected": "trigger"
+        },
+        {
+          "id": "cro-p2",
+          "prompt": "Find duplicated business logic across these services and extract a shared helper with tests.",
+          "expected": "trigger"
+        },
+        {
+          "id": "cro-p3",
+          "prompt": "Clean up this legacy module using systematic refactoring patterns without changing behavior.",
+          "expected": "trigger"
+        },
+        {
+          "id": "cro-p4",
+          "prompt": "Optimize this slow data-processing loop for runtime efficiency and document the measured gain.",
+          "expected": "trigger"
+        },
+        {
+          "id": "cro-p5",
+          "prompt": "Reduce nesting and eliminate dead code in this authentication handler.",
+          "expected": "trigger"
+        }
+      ],
+      "negative": [
+        {
+          "id": "cro-n1",
+          "prompt": "Explain the theory of relativity in simple terms.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "cro-n2",
+          "prompt": "What is the tallest mountain in the world?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "cro-n3",
+          "prompt": "Write a haiku about autumn rain.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "cro-n4",
+          "prompt": "How do I bake sourdough bread at home?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "cro-n5",
+          "prompt": "Summarize the rules of chess for a beginner.",
+          "expected": "no-trigger"
+        }
+      ]
+    },
+    "security-vulnerability-auditor": {
+      "positive": [
+        {
+          "id": "sec-p1",
+          "prompt": "Audit this login flow for OWASP Top 10 risks including broken access control and injection.",
+          "expected": "trigger"
+        },
+        {
+          "id": "sec-p2",
+          "prompt": "Scan these dependencies for known vulnerabilities and propose pinned upgrades.",
+          "expected": "trigger"
+        },
+        {
+          "id": "sec-p3",
+          "prompt": "Check this codebase for leaked secrets, tokens, and private keys with rotation guidance.",
+          "expected": "trigger"
+        },
+        {
+          "id": "sec-p4",
+          "prompt": "Review this authorization model for privilege-escalation paths and data-exposure risks.",
+          "expected": "trigger"
+        },
+        {
+          "id": "sec-p5",
+          "prompt": "Assess this API for authentication weaknesses and missing rate limiting before release.",
+          "expected": "trigger"
+        }
+      ],
+      "negative": [
+        {
+          "id": "sec-n1",
+          "prompt": "Recommend a good science-fiction novel for the weekend.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "sec-n2",
+          "prompt": "What is the boiling point of water at sea level?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "sec-n3",
+          "prompt": "Teach me three basic guitar chords.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "sec-n4",
+          "prompt": "How do I grow tomatoes on a balcony?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "sec-n5",
+          "prompt": "Write a wedding toast for my best friend.",
+          "expected": "no-trigger"
+        }
+      ]
+    },
+    "test-automation-engineer": {
+      "positive": [
+        {
+          "id": "tae-p1",
+          "prompt": "Generate unit tests plus one integration test for this payment module with a coverage report.",
+          "expected": "trigger"
+        },
+        {
+          "id": "tae-p2",
+          "prompt": "Stabilize this flaky end-to-end checkout flow and quarantine the nondeterministic step.",
+          "expected": "trigger"
+        },
+        {
+          "id": "tae-p3",
+          "prompt": "Expand coverage for these validation specs with boundary and error-path cases.",
+          "expected": "trigger"
+        },
+        {
+          "id": "tae-p4",
+          "prompt": "Build a contract test between this frontend client and the billing API.",
+          "expected": "trigger"
+        },
+        {
+          "id": "tae-p5",
+          "prompt": "Design a multi-tier test plan from unit to E2E for the new notification service.",
+          "expected": "trigger"
+        },
+        {
+          "id": "tae-p6",
+          "prompt": "Capture baseline screenshots for this checkout journey at 360, 768, and 1440 pixels with the Playwright MCP.",
+          "expected": "trigger"
+        },
+        {
+          "id": "tae-p7",
+          "prompt": "Diff these product-page screenshots against baseline and file P0 to P3 visual findings.",
+          "expected": "trigger"
+        },
+        {
+          "id": "tae-p8",
+          "prompt": "Buatkan rencana pengujian regresi visual untuk layanan notifikasi ini beserta ambang P0 sampai P3.",
+          "expected": "trigger"
+        },
+        {
+          "id": "tae-p9",
+          "prompt": "Quarantine this font-loading screenshot flake and freeze webfonts during capture.",
+          "expected": "trigger"
+        },
+        {
+          "id": "tae-p10",
+          "prompt": "Write a diff report with approver decision for these dashboard screenshots versus baseline.",
+          "expected": "trigger"
+        },
+        {
+          "id": "tae-p11",
+          "prompt": "Tinjau hasil screenshot pengujian E2E ini dan tentukan mana regresi dan mana perubahan disengaja.",
+          "expected": "trigger"
+        },
+        {
+          "id": "tae-p12",
+          "prompt": "Prove this release has zero open P0 visual findings older than 14 days with evidence.",
+          "expected": "trigger"
+        }
+      ],
+      "negative": [
+        {
+          "id": "tae-n1",
+          "prompt": "What is the capital of Japan?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "tae-n2",
+          "prompt": "Explain how tides work.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "tae-n3",
+          "prompt": "Give me tips for better sleep.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "tae-n4",
+          "prompt": "How do I change a flat tire?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "tae-n5",
+          "prompt": "Write a limerick about a cat.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "tae-n6",
+          "prompt": "Take a screenshot of this meme for my slide deck.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "tae-n7",
+          "prompt": "Explain the history of photography in one paragraph.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "tae-n8",
+          "prompt": "What is the best monitor for photo editing under $500?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "tae-n9",
+          "prompt": "Buatkan resep makan malam sederhana dengan ayam dan nasi.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "tae-n10",
+          "prompt": "How do I frame a poster on my wall?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "tae-n11",
+          "prompt": "Describe what a beautiful sunset looks like to a child.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "tae-n12",
+          "prompt": "Which camera lens should I buy for travel vlogging?",
+          "expected": "no-trigger"
+        }
+      ]
+    },
+    "architecture-documentation-generator": {
+      "positive": [
+        {
+          "id": "adg-p1",
+          "prompt": "Generate synchronized architecture documentation from this repository including a container diagram.",
+          "expected": "trigger"
+        },
+        {
+          "id": "adg-p2",
+          "prompt": "Create an OpenAPI contract for this billing service from the implementation.",
+          "expected": "trigger"
+        },
+        {
+          "id": "adg-p3",
+          "prompt": "Sync these docs after the recent data-flow refactor and flag drifted sections.",
+          "expected": "trigger"
+        },
+        {
+          "id": "adg-p4",
+          "prompt": "Visualize the event flow between these microservices as a sequence diagram.",
+          "expected": "trigger"
+        },
+        {
+          "id": "adg-p5",
+          "prompt": "Publish an API reference for external integrators from these annotated handlers.",
+          "expected": "trigger"
+        }
+      ],
+      "negative": [
+        {
+          "id": "adg-n1",
+          "prompt": "How many planets are in the solar system?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "adg-n2",
+          "prompt": "What is photosynthesis?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "adg-n3",
+          "prompt": "Tell me a joke about programmers.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "adg-n4",
+          "prompt": "How do I tie a tie?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "adg-n5",
+          "prompt": "What time is it in London right now?",
+          "expected": "no-trigger"
+        }
+      ]
+    },
+    "accessibility-inclusive-design": {
+      "positive": [
+        {
+          "id": "aid-p1",
+          "prompt": "Audit this checkout page for WCAG 2.1 AA conformance with correct ARIA semantics.",
+          "expected": "trigger"
+        },
+        {
+          "id": "aid-p2",
+          "prompt": "Fix the keyboard navigation trap in this modal dialog and verify focus order.",
+          "expected": "trigger"
+        },
+        {
+          "id": "aid-p3",
+          "prompt": "Check color contrast on these dashboard cards and propose compliant alternatives.",
+          "expected": "trigger"
+        },
+        {
+          "id": "aid-p4",
+          "prompt": "Add screen-reader labels to this data table without changing its visual layout.",
+          "expected": "trigger"
+        },
+        {
+          "id": "aid-p5",
+          "prompt": "Review this onboarding flow for cognitive accessibility and plain-language improvements.",
+          "expected": "trigger"
+        },
+        {
+          "id": "aid-p6",
+          "prompt": "Verify full keyboard completion across these 10 core journeys with visible focus order.",
+          "expected": "trigger"
+        },
+        {
+          "id": "aid-p7",
+          "prompt": "Test this checkout flow at 200 percent zoom with high-contrast themes enabled.",
+          "expected": "trigger"
+        },
+        {
+          "id": "aid-p8",
+          "prompt": "Audit artefak antarmuka ini untuk kontras, label, dan urutan fokus sesuai WCAG 2.1 AA.",
+          "expected": "trigger"
+        },
+        {
+          "id": "aid-p9",
+          "prompt": "Add polite live-region announcements for these async search results without stealing focus.",
+          "expected": "trigger"
+        },
+        {
+          "id": "aid-p10",
+          "prompt": "Tingkatkan keterbacaan formulir ini dengan bahasa sederhana dan panduan error per kolom.",
+          "expected": "trigger"
+        },
+        {
+          "id": "aid-p11",
+          "prompt": "Record an assistive-technology evidence log with screen reader, browser, and tool versions.",
+          "expected": "trigger"
+        },
+        {
+          "id": "aid-p12",
+          "prompt": "Check touch targets and switch-input operability on this tablet layout.",
+          "expected": "trigger"
+        }
+      ],
+      "negative": [
+        {
+          "id": "aid-n1",
+          "prompt": "What is the speed of light?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "aid-n2",
+          "prompt": "How do I cook pasta al dente?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "aid-n3",
+          "prompt": "Recommend a hiking trail near Bandung.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "aid-n4",
+          "prompt": "Explain the stock market to a teenager.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "aid-n5",
+          "prompt": "What is the largest ocean on Earth?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "aid-n6",
+          "prompt": "What does 20/20 vision mean?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "aid-n7",
+          "prompt": "Explain the human eye anatomy to a student.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "aid-n8",
+          "prompt": "Recommend ergonomic office chairs under $300.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "aid-n9",
+          "prompt": "How do I get better sleep with less screen time?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "aid-n10",
+          "prompt": "Jelaskan cara memasak nasi goreng yang enak untuk makan malam keluarga.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "aid-n11",
+          "prompt": "What is the tallest building in Jakarta?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "aid-n12",
+          "prompt": "Teach me sign language alphabet basics.",
+          "expected": "no-trigger"
+        }
+      ]
+    },
+    "continuous-observability-telemetry": {
+      "positive": [
+        {
+          "id": "cot-p1",
+          "prompt": "Instrument this checkout service with OpenTelemetry traces, metrics, and structured logs.",
+          "expected": "trigger"
+        },
+        {
+          "id": "cot-p2",
+          "prompt": "Define SLO signals and alert thresholds for this payment API with runbook links.",
+          "expected": "trigger"
+        },
+        {
+          "id": "cot-p3",
+          "prompt": "Diagnose this latency spike using distributed traces across the three services.",
+          "expected": "trigger"
+        },
+        {
+          "id": "cot-p4",
+          "prompt": "Add RED metrics dashboards for this notification pipeline in production.",
+          "expected": "trigger"
+        },
+        {
+          "id": "cot-p5",
+          "prompt": "Configure sampling and retention for high-volume traces without losing error visibility.",
+          "expected": "trigger"
+        }
+      ],
+      "negative": [
+        {
+          "id": "cot-n1",
+          "prompt": "Who wrote the novel Dune?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "cot-n2",
+          "prompt": "How do I unclog a drain?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "cot-n3",
+          "prompt": "What is the currency of Thailand?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "cot-n4",
+          "prompt": "Teach me basic photography composition.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "cot-n5",
+          "prompt": "How do penguins stay warm?",
+          "expected": "no-trigger"
+        }
+      ]
+    },
+    "backend-engineering-excellence": {
+      "positive": [
+        {
+          "id": "bee-p1",
+          "prompt": "Design a versioned REST API for this ordering domain with idempotency and pagination.",
+          "expected": "trigger"
+        },
+        {
+          "id": "bee-p2",
+          "prompt": "Tune this slow reporting query to meet the sub-100ms latency budget with an index plan.",
+          "expected": "trigger"
+        },
+        {
+          "id": "bee-p3",
+          "prompt": "Model this inventory bounded context with explicit consistency guarantees.",
+          "expected": "trigger"
+        },
+        {
+          "id": "bee-p4",
+          "prompt": "Harden this webhook endpoint with signature verification and replay protection.",
+          "expected": "trigger"
+        },
+        {
+          "id": "bee-p5",
+          "prompt": "Add encryption at rest and in transit for this PII store with key-rotation policy.",
+          "expected": "trigger"
+        }
+      ],
+      "negative": [
+        {
+          "id": "bee-n1",
+          "prompt": "What is the national flower of Indonesia?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "bee-n2",
+          "prompt": "How do I meditate for ten minutes?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "bee-n3",
+          "prompt": "Explain fractions to a child.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "bee-n4",
+          "prompt": "What is the deepest part of the ocean?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "bee-n5",
+          "prompt": "How do I write a resignation letter?",
+          "expected": "no-trigger"
+        }
+      ]
+    },
+    "frontend-engineering-excellence": {
+      "positive": [
+        {
+          "id": "fee-p1",
+          "prompt": "Fix the cumulative layout shift on this product page to meet Core Web Vitals targets.",
+          "expected": "trigger"
+        },
+        {
+          "id": "fee-p2",
+          "prompt": "Build a resilient client-state flow for this offline-capable task list.",
+          "expected": "trigger"
+        },
+        {
+          "id": "fee-p3",
+          "prompt": "Optimize this image gallery rendering to hold INP under budget on mid-range phones.",
+          "expected": "trigger"
+        },
+        {
+          "id": "fee-p4",
+          "prompt": "Verify this checkout form across the supported browser matrix including error states.",
+          "expected": "trigger"
+        },
+        {
+          "id": "fee-p5",
+          "prompt": "Refactor this prop-drilled component tree into a predictable store with loading states.",
+          "expected": "trigger"
+        },
+        {
+          "id": "fee-p6",
+          "prompt": "Capture loading, empty, and error states for every data view on this dashboard route.",
+          "expected": "trigger"
+        },
+        {
+          "id": "fee-p7",
+          "prompt": "Enforce the component budget on this route: one component per visual role with composition rationale.",
+          "expected": "trigger"
+        },
+        {
+          "id": "fee-p8",
+          "prompt": "Buatkan alur client-state yang tangguh untuk daftar tugas offline ini dengan perilaku retry.",
+          "expected": "trigger"
+        },
+        {
+          "id": "fee-p9",
+          "prompt": "Audit this route bundle against the 200KB budget and defer non-critical third-party scripts.",
+          "expected": "trigger"
+        },
+        {
+          "id": "fee-p10",
+          "prompt": "Tinjau pergeseran layout pada halaman produk ini dan pastikan CLS di bawah 0,1.",
+          "expected": "trigger"
+        },
+        {
+          "id": "fee-p11",
+          "prompt": "Preserve scroll position and focus across filter changes and pagination on this listing page.",
+          "expected": "trigger"
+        },
+        {
+          "id": "fee-p12",
+          "prompt": "Verify offline and degraded-network behavior for this checkout flow on throttled 4G.",
+          "expected": "trigger"
+        }
+      ],
+      "negative": [
+        {
+          "id": "fee-n1",
+          "prompt": "What causes rainbows?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "fee-n2",
+          "prompt": "How do I fold a fitted sheet?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "fee-n3",
+          "prompt": "Who painted the Mona Lisa?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "fee-n4",
+          "prompt": "What is the fastest land animal?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "fee-n5",
+          "prompt": "How do I plan a budget vacation?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "fee-n6",
+          "prompt": "Teach me HTML and CSS basics from zero.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "fee-n7",
+          "prompt": "What is the most popular JavaScript framework this year?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "fee-n8",
+          "prompt": "Explain how the internet works in simple terms.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "fee-n9",
+          "prompt": "How do I install Node.js on Windows?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "fee-n10",
+          "prompt": "Buatkan daftar belanja mingguan dengan kentang, telur, dan ayam.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "fee-n11",
+          "prompt": "Which laptop is best for computer science students?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "fee-n12",
+          "prompt": "Write a product description for a ceramic coffee mug.",
+          "expected": "no-trigger"
+        }
+      ]
+    },
+    "human-centric-visual-excellence": {
+      "positive": [
+        {
+          "id": "hcv-p1",
+          "prompt": "Refine this dashboard hierarchy with spatial harmony and consistent typographic scale.",
+          "expected": "trigger"
+        },
+        {
+          "id": "hcv-p2",
+          "prompt": "Design luxury motion for this onboarding sequence without harming perceived performance.",
+          "expected": "trigger"
+        },
+        {
+          "id": "hcv-p3",
+          "prompt": "Rework this settings screen for visual calm while keeping expert shortcuts discoverable.",
+          "expected": "trigger"
+        },
+        {
+          "id": "hcv-p4",
+          "prompt": "Establish a color and elevation system for these cards grounded in human-factors evidence.",
+          "expected": "trigger"
+        },
+        {
+          "id": "hcv-p5",
+          "prompt": "Polish this empty state with warmth and a clear next action.",
+          "expected": "trigger"
+        },
+        {
+          "id": "hcv-p6",
+          "prompt": "Freeze a one-page Art Brief with brand adjectives and anti-references before coding this landing page.",
+          "expected": "trigger"
+        },
+        {
+          "id": "hcv-p7",
+          "prompt": "Define imagery rules for this fintech app: photo versus illustration with forbidden stock tropes.",
+          "expected": "trigger"
+        },
+        {
+          "id": "hcv-p8",
+          "prompt": "Buatkan konsep art direction untuk dashboard ini dengan tiga kata sifat merek dan ritme halaman.",
+          "expected": "trigger"
+        },
+        {
+          "id": "hcv-p9",
+          "prompt": "Differentiate this pricing page from generic SaaS templates with three named differentiators.",
+          "expected": "trigger"
+        },
+        {
+          "id": "hcv-p10",
+          "prompt": "Tinjau arah visual halaman ini dan pastikan karakternya terlihat bahkan dalam wireframe grayscale.",
+          "expected": "trigger"
+        },
+        {
+          "id": "hcv-p11",
+          "prompt": "Establish the page rhythm cadence for this marketing site from hero to call-to-action.",
+          "expected": "trigger"
+        },
+        {
+          "id": "hcv-p12",
+          "prompt": "Run a blind brand-recall check on these two mockups with five respondents.",
+          "expected": "trigger"
+        }
+      ],
+      "negative": [
+        {
+          "id": "hcv-n1",
+          "prompt": "What is the chemical symbol for gold?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "hcv-n2",
+          "prompt": "How do I whistle with my fingers?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "hcv-n3",
+          "prompt": "What is the longest river in the world?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "hcv-n4",
+          "prompt": "Explain gravity in one paragraph.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "hcv-n5",
+          "prompt": "How do I start a vegetable garden?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "hcv-n6",
+          "prompt": "Explain color theory in physics with wavelengths and spectra.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "hcv-n7",
+          "prompt": "Who painted the Sistine Chapel ceiling?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "hcv-n8",
+          "prompt": "What is the most expensive painting ever sold?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "hcv-n9",
+          "prompt": "Sebutkan menu makan malam terenak dengan kentang dan telur.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "hcv-n10",
+          "prompt": "Teach me to draw anime faces step by step.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "hcv-n11",
+          "prompt": "What paint finish should I use for my bedroom walls?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "hcv-n12",
+          "prompt": "Generate a random fantasy map for my tabletop game.",
+          "expected": "no-trigger"
+        }
+      ]
+    },
+    "deployment-devops-orchestrator": {
+      "positive": [
+        {
+          "id": "ddo-p1",
+          "prompt": "Build a minimal container image for this API service with a pinned base and non-root user.",
+          "expected": "trigger"
+        },
+        {
+          "id": "ddo-p2",
+          "prompt": "Create a gated CI/CD pipeline that runs security and test checks before any deploy.",
+          "expected": "trigger"
+        },
+        {
+          "id": "ddo-p3",
+          "prompt": "Configure progressive delivery with feature flags and automated rollback for this release.",
+          "expected": "trigger"
+        },
+        {
+          "id": "ddo-p4",
+          "prompt": "Harden this deployment manifest with resource limits, probes, and secret references.",
+          "expected": "trigger"
+        },
+        {
+          "id": "ddo-p5",
+          "prompt": "Optimize this pipeline cache to cut build time while keeping hermetic reproducibility.",
+          "expected": "trigger"
+        }
+      ],
+      "negative": [
+        {
+          "id": "ddo-n1",
+          "prompt": "What is the population of Paris?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "ddo-n2",
+          "prompt": "How do I make ice cream without a machine?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "ddo-n3",
+          "prompt": "Who invented the telephone?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "ddo-n4",
+          "prompt": "What is the smallest country in the world?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "ddo-n5",
+          "prompt": "How do I learn to swim as an adult?",
+          "expected": "no-trigger"
+        }
+      ]
+    },
+    "fullstack-e2e-mastery": {
+      "positive": [
+        {
+          "id": "fem-p1",
+          "prompt": "Assemble a verified end-to-end slice from interface through domain to data for user registration.",
+          "expected": "trigger"
+        },
+        {
+          "id": "fem-p2",
+          "prompt": "Trace this order failure across frontend state, API contract, and database transaction.",
+          "expected": "trigger"
+        },
+        {
+          "id": "fem-p3",
+          "prompt": "Design the data model and API contract together for this booking journey with E2E tests.",
+          "expected": "trigger"
+        },
+        {
+          "id": "fem-p4",
+          "prompt": "Prove production readiness for this slice with contract tests, SLO checks, and rollback evidence.",
+          "expected": "trigger"
+        },
+        {
+          "id": "fem-p5",
+          "prompt": "Integrate auth, billing, and notification layers into one tested user journey.",
+          "expected": "trigger"
+        },
+        {
+          "id": "fem-p6",
+          "prompt": "Map this checkout slice from interface state through API contract to database transaction.",
+          "expected": "trigger"
+        },
+        {
+          "id": "fem-p7",
+          "prompt": "Freeze the API contract before building handlers and views for this booking flow.",
+          "expected": "trigger"
+        },
+        {
+          "id": "fem-p8",
+          "prompt": "Buatkan irisan E2E terverifikasi untuk pendaftaran pengguna dari antarmuka hingga data.",
+          "expected": "trigger"
+        },
+        {
+          "id": "fem-p9",
+          "prompt": "Add layered error boundaries mapping domain errors to user-safe messages with correlation IDs.",
+          "expected": "trigger"
+        },
+        {
+          "id": "fem-p10",
+          "prompt": "Tinjau kepemilikan state lintas cache klien dan database untuk perjalanan pesanan ini.",
+          "expected": "trigger"
+        },
+        {
+          "id": "fem-p11",
+          "prompt": "Verify persistence migrations run forward and backward on a production-shaped copy.",
+          "expected": "trigger"
+        },
+        {
+          "id": "fem-p12",
+          "prompt": "Prove this slice meets latency budgets and OWASP mitigations with retained evidence.",
+          "expected": "trigger"
+        }
+      ],
+      "negative": [
+        {
+          "id": "fem-n1",
+          "prompt": "What is the hottest planet?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "fem-n2",
+          "prompt": "How do I juggle three balls?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "fem-n3",
+          "prompt": "What language is spoken in Brazil?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "fem-n4",
+          "prompt": "How do I fix a leaky faucet?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "fem-n5",
+          "prompt": "Who wrote Romeo and Juliet?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "fem-n6",
+          "prompt": "Explain what a database is to a beginner.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "fem-n7",
+          "prompt": "What is the difference between frontend and backend in one sentence?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "fem-n8",
+          "prompt": "How do I become a full-stack developer?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "fem-n9",
+          "prompt": "What is the most popular programming language?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "fem-n10",
+          "prompt": "Masak apa untuk makan malam dengan kentang dan telur yang enak?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "fem-n11",
+          "prompt": "Who invented the World Wide Web?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "fem-n12",
+          "prompt": "Write a job description for a barista.",
+          "expected": "no-trigger"
+        }
+      ]
+    },
+    "task-orchestrator": {
+      "positive": [
+        {
+          "id": "tor-p1",
+          "prompt": "Route this task to the best skill without a slash command and orchestrate the workflow.",
+          "expected": "trigger"
+        },
+        {
+          "id": "tor-p2",
+          "prompt": "Which skill should handle this multi-capability request? Choose automatically.",
+          "expected": "trigger"
+        },
+        {
+          "id": "tor-p3",
+          "prompt": "Rute tugasku ke skill terbaik tanpa perintah slash dan orkestrasi otomatis.",
+          "expected": "trigger"
+        },
+        {
+          "id": "tor-p4",
+          "prompt": "No slash command was given; auto select the workflow and delegate to the right capabilities.",
+          "expected": "trigger"
+        },
+        {
+          "id": "tor-p5",
+          "prompt": "Skill mana yang harus menangani permintaan multi-kemampuan ini? Pilihkan otomatis.",
+          "expected": "trigger"
+        }
+      ],
+      "negative": [
+        {
+          "id": "tor-n1",
+          "prompt": "What is the capital of France?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "tor-n2",
+          "prompt": "Jelaskan cara membuat nasi goreng yang enak untuk makan malam.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "tor-n3",
+          "prompt": "Translate this paragraph into Indonesian.",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "tor-n4",
+          "prompt": "How do I meditate for ten minutes?",
+          "expected": "no-trigger"
+        },
+        {
+          "id": "tor-n5",
+          "prompt": "Sebutkan menu makan malam terenak dengan kentang dan telur.",
+          "expected": "no-trigger"
+        }
+      ]
+    }
+  },
+  "evaluation_type": "candidate-test-set-not-runtime-results"
+}

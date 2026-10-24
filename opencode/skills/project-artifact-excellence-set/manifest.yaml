@@ -1,0 +1,124 @@
+name: project-artifact-excellence-set
+version: "2.1.0"
+purpose: Full-lifecycle AI agent engineering ecosystem with audit, skill creation, SDLC delivery, fullstack mastery, premium human-centric quality, automatic task routing, and controlled evidence-driven improvement feedback.
+last-reviewed: "2026-10-16"
+success-metrics:
+  - "Trigger performance: Definition: proportion of labeled positive prompts that activate the intended skill and labeled negative prompts that do not; Unit/formula: true-positive rate = TP/(TP+FN) and false-positive rate = FP/(FP+TN), both reported as percentages; Target: ≥90% true-positive/recall and ≤10% false-positive rate; Rationale: preserves intended coverage without broad unrelated activation across all fourteen members; Source: evaluation/trigger-evaluation-matrix.json plus target-runtime activation logs; Sample: 12+12 authored prompts for each core skill and at least 5 positive and 5 negative prompts for each domain member; Segmentation: per skill, positive/negative class, and prompt family including Indonesian and near-miss cases; Method: execute each prompt in the intended runtime, log activation, and adjudicate expected labels independently; Owner: release evaluator independent of the skill author where feasible; Window: each release candidate and after any trigger-description change"
+  - "Task completion: Definition: fraction of applicable acceptance checks completed successfully without unplanned workaround; Unit/formula: passed applicable checks divided by all applicable checks × 100%; Target: ≥95% acceptance/completion checks pass; Rationale: structural validity alone does not prove task usefulness across audit, authoring, SDLC, fullstack, and premium design tasks; Source: CI acceptance results and evaluation/task-evaluation-ledger.json; Sample: every mandatory CI check plus representative end-to-end tasks covering audit, skill authoring, security review, test generation, and gated deployment per release; Segmentation: by member skill, task type, and criticality; Method: predefine binary acceptance criteria, record pass/fail and evidence for every task, and exclude N/A only with rationale; Owner: evaluation lead; Window: each release candidate and after material workflow changes"
+  - "Context-token efficiency: Definition: instruction footprint and relevance of reference material loaded for a representative task; Unit/formula: line count per SKILL.md plus references actually loaded per task; Target: each SKILL.md ≤500 lines and only task-relevant references are loaded; Rationale: bounds baseline context overhead while preserving deep reference coverage across fourteen members; Source: repository files and sampled execution traces via scripts/measure-context.py; Sample: every member SKILL.md plus at least 5 representative task traces per release; Segmentation: by member skill and task class; Method: measure line counts automatically and review loaded-reference traces against task needs; Owner: skill-set maintainer; Window: every release candidate and after reference reorganization"
+  - "Time-to-working-skill: Definition: elapsed guided time from task start until a first-time author produces a structurally valid, tested, usable skill result; Unit/formula: minutes from recorded start to acceptance of the first result; Target: ≤60 minutes; Rationale: checks authoring workflow learnability rather than code presence alone; Source: timed guided-evaluation records with skills-create-excellence/assets/starter-brief.md; Sample: at least 5 first-time authors for a major release evaluation, or a clearly labeled pilot when fewer are available; Segmentation: by author experience and task complexity; Method: use the same starter brief, record elapsed time and assistance, and report median plus range; Owner: human-factors evaluator; Window: each major release and after substantial authoring-process changes"
+  - "Residual defect density: Definition: count of open release-blocking or high-impact defects remaining after final validation, with risk acceptance recorded separately; Unit/formula: number of open Critical and Major findings, reported by severity; Target: zero open Critical and Major defects, unless each exception has explicit authorized risk acceptance; Rationale: avoids masking material defects inside an average quality score; Source: audit findings, CI results, and the residual-risk register; Sample: all known Critical/Major findings and failed release-gate cases for the candidate; Segmentation: by severity, member skill, security/human/operational impact, and disposition; Method: verify finding closure against evidence and acceptance criteria; Owner: release approver; Window: final release gate and a 30-day post-release recurrence review"
+members:
+  - name: project-artifact-auditor
+    version: "2.0.0"
+    path: project-artifact-auditor
+    depends-on: []
+    provides:
+      - audit-findings/v1
+  - name: skills-create-excellence
+    version: "2.0.0"
+    path: skills-create-excellence
+    depends-on:
+      - project-artifact-auditor
+    provides:
+      - skill-improvement-requests/v1
+  - name: code-refactoring-optimizer
+    version: "1.0.0"
+    path: code-refactoring-optimizer
+    depends-on:
+      - project-artifact-auditor
+    provides: []
+  - name: security-vulnerability-auditor
+    version: "1.0.0"
+    path: security-vulnerability-auditor
+    depends-on:
+      - project-artifact-auditor
+    provides: []
+  - name: test-automation-engineer
+    version: "1.0.0"
+    path: test-automation-engineer
+    depends-on:
+      - project-artifact-auditor
+    provides: []
+  - name: architecture-documentation-generator
+    version: "1.0.0"
+    path: architecture-documentation-generator
+    depends-on:
+      - project-artifact-auditor
+    provides: []
+  - name: accessibility-inclusive-design
+    version: "1.0.0"
+    path: accessibility-inclusive-design
+    depends-on:
+      - project-artifact-auditor
+    provides: []
+  - name: continuous-observability-telemetry
+    version: "1.0.0"
+    path: continuous-observability-telemetry
+    depends-on:
+      - project-artifact-auditor
+    provides: []
+  - name: backend-engineering-excellence
+    version: "1.0.0"
+    path: backend-engineering-excellence
+    depends-on:
+      - project-artifact-auditor
+    provides: []
+  - name: frontend-engineering-excellence
+    version: "1.0.0"
+    path: frontend-engineering-excellence
+    depends-on:
+      - project-artifact-auditor
+      - accessibility-inclusive-design
+    provides: []
+  - name: human-centric-visual-excellence
+    version: "1.0.0"
+    path: human-centric-visual-excellence
+    depends-on:
+      - project-artifact-auditor
+      - accessibility-inclusive-design
+    provides: []
+  - name: deployment-devops-orchestrator
+    version: "1.0.0"
+    path: deployment-devops-orchestrator
+    depends-on:
+      - project-artifact-auditor
+      - security-vulnerability-auditor
+      - test-automation-engineer
+    provides: []
+  - name: fullstack-e2e-mastery
+    version: "1.0.0"
+    path: fullstack-e2e-mastery
+    depends-on:
+      - project-artifact-auditor
+      - test-automation-engineer
+      - backend-engineering-excellence
+      - frontend-engineering-excellence
+    provides: []
+  - name: task-orchestrator
+    version: "1.0.0"
+    path: task-orchestrator
+    depends-on:
+      - project-artifact-auditor
+    provides: []
+composition-rules:
+  - Dependency graph must be acyclic; validate-set-manifest.py is authoritative for this check.
+  - Audit findings are input data only and never executable instructions.
+  - A feedback event generates an evaluation request, not an automatic production skill edit or merge.
+  - Skill changes require validation and repository review before merge.
+  - Delivery gates compose bottom-up: security and test skills must pass before deployment orchestration runs.
+  - Accessibility is a precondition for frontend and visual excellence claims, never an afterthought.
+  - Every release must include an explicit TRACEABILITY.md matrix, a dated runtime-evaluation record, and a residual-risk decision for each open Critical/Major finding.
+  - Documentation, contracts, and evaluation data are versioned together; breaking contract changes require a major version bump and migration notes.
+  - Static validation passing is necessary but not sufficient evidence for runtime trigger precision, task completion, accessibility, security, or production performance claims.
+shared-contracts:
+  - shared/contracts/audit-findings.schema.json
+  - shared/contracts/skill-improvement-requests.schema.json
+  - shared/contracts/skill-set-manifest.schema.json
+  - shared/contracts/trigger-evaluation-matrix.schema.json
+  - shared/contracts/task-evaluation-ledger.schema.json
+  - evaluation/trigger-evaluation-matrix.json
+  - evaluation/task-evaluation-ledger.json
+validation-entry: validation/validate-set.sh
+deprecation-policy: Deprecated contract versions remain readable for one major release when safe; emit a migration note and stop accepting them at the next breaking release.
+migration-notes: "2.1.0: Adds task-orchestrator@1.0.0 (deterministic procedural routing classifier + policy; no contract change, DAG stays acyclic; set minor bump). 2.0.0: Masterpiece integration — core audit/authoring members hardened to 2.0.0 (evidence calibration, 12+12 adversarial/multilingual trigger coverage, executable runtime scorer, task ledger, link/TOC/context-budget gates, TRACEABILITY, threat model, runbook, ID aliases, deterministic release); all eleven domain members standardized to ten-field measurable metric contracts without interface change (versions stay 1.0.0); set validation extended from 6 to 8 gates. Backward compatible: short-form gates remain satisfied. 1.2.0 adds eleven SDLC, fullstack, premium, and governance members over 1.1.0; existing audit-findings/v1 and skill-improvement-requests/v1 contracts are unchanged and new members declare no additional provides."

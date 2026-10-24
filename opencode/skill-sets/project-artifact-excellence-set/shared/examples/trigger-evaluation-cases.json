@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0",
+  "skills": {
+    "project-artifact-auditor": {
+      "positive": [
+        "Audit these project artifacts end to end and identify traceability gaps.",
+        "Review this PRD and SRS for completeness, ambiguity, and testable acceptance criteria.",
+        "Perform an architecture, security, and reliability audit for this full-stack service.",
+        "Assess usability, accessibility, and human-factors risks in this product journey.",
+        "Review CI/CD, observability, resilience, and production readiness for this project."
+      ],
+      "negative": [
+        "Explain recursion with a simple example.",
+        "Translate this paragraph into Indonesian.",
+        "What is the capital of France?",
+        "Write a basic sorting algorithm in Python.",
+        "Suggest names for a fantasy novel character."
+      ]
+    },
+    "skills-create-excellence": {
+      "positive": [
+        "Create an exceptional new agent skill with measurable success metrics and tests.",
+        "Improve this agent specification using acceptance criteria, failure modes, and residual risks.",
+        "Compose these capabilities into a modular skill set with explicit contracts and a manifest.",
+        "Validate this SKILL.md frontmatter, metadata version, quality attributes, and regression fixtures.",
+        "Review positive and negative trigger prompts and improve the skill description without increasing false positives."
+      ],
+      "negative": [
+        "Summarize this news article in three sentences.",
+        "Explain Newton's second law of motion.",
+        "Write a CSS hover effect for a button.",
+        "Give me a simple dinner recipe using potatoes.",
+        "Translate this short Spanish paragraph into English."
+      ]
+    },
+    "code-refactoring-optimizer": {
+      "positive": [
+        "Refactor this God function into smaller testable modules and reduce its cyclomatic complexity.",
+        "Find duplicated business logic across these services and extract a shared module.",
+        "Optimize this slow database query path and show before and after latency numbers.",
+        "Detect code smells in this pull request and propose a concrete cleanup plan.",
+        "Split this oversized frontend component into focused presentational and container parts."
+      ],
+      "negative": [
+        "Explain photosynthesis in simple terms.",
+        "What is the boiling point of water at sea level?",
+        "Write a haiku about autumn rain.",
+        "Convert 42 kilometers to miles.",
+        "Name three famous impressionist painters."
+      ]
+    },
+    "security-vulnerability-auditor": {
+      "positive": [
+        "Audit this login flow for OWASP Top 10 issues including injection and broken access control.",
+        "Scan this repository for leaked secrets and weak credential handling.",
+        "Review our RBAC rules for privilege escalation paths before release.",
+        "Check whether user input on this form is sanitized against XSS and SQL injection.",
+        "Assess third-party dependencies for known vulnerabilities and outdated versions."
+      ],
+      "negative": [
+        "Describe how tides work.",
+        "What year did the Eiffel Tower open?",
+        "Write a limerick about a lighthouse.",
+        "How many grams are in a kilogram?",
+        "List the planets in order from the sun."
+      ]
+    },
+    "test-automation-engineer": {
+      "positive": [
+        "Generate a Playwright E2E suite covering checkout from cart to payment confirmation.",
+        "Write unit tests with Vitest for this pricing module to reach 80 percent coverage.",
+        "Stabilize these flaky Cypress tests with a quarantine and retry policy.",
+        "Create BDD scenarios for user registration including edge cases.",
+        "Map these integration test results to our fullstack E2E quality metrics."
+      ],
+      "negative": [
+        "Explain the difference between weather and climate.",
+        "Who wrote Hamlet?",
+        "Give me a pancake recipe for two people.",
+        "What is the square root of 144?",
+        "Name the capital of Japan."
+      ]
+    },
+    "architecture-documentation-generator": {
+      "positive": [
+        "Generate OpenAPI documentation for these REST endpoints with examples.",
+        "Sync the architecture docs after this service split and flag stale sections.",
+        "Create a Mermaid system diagram showing data flow between gateway and workers.",
+        "Document the event contracts for this async order pipeline.",
+        "Run the AST doc sync check and report signature drift against the baseline."
+      ],
+      "negative": [
+        "Explain how a rainbow forms.",
+        "What is the currency of Brazil?",
+        "Write a short story about a lost key.",
+        "How many minutes are in a day?",
+        "List three breeds of herding dogs."
+      ]
+    },
+    "deployment-devops-orchestrator": {
+      "positive": [
+        "Containerize this API with a minimal Docker image and a vulnerability scan step.",
+        "Design a CI/CD pipeline with validate test scan build and deploy stages.",
+        "Optimize this slow CI build with caching and parallel jobs.",
+        "Write Kubernetes manifests with resource limits and health probes for this service.",
+        "Define deployment gates that require security and test checks to pass first."
+      ],
+      "negative": [
+        "Explain why the sky is blue.",
+        "Who painted the Mona Lisa?",
+        "Share a quick pasta recipe.",
+        "What is 15 percent of 200?",
+        "Name the largest ocean on Earth."
+      ]
+    },
+    "fullstack-e2e-mastery": {
+      "positive": [
+        "Build a fullstack task app with auth, REST API, Postgres, and E2E verification.",
+        "Design the system architecture for a modular monolith with an event-driven billing module.",
+        "Optimize this database schema with indexes and prove the latency improvement.",
+        "Integrate the React frontend state with the backend contract and error boundaries.",
+        "Assemble E2E validation tracing user signup through email verification to first login."
+      ],
+      "negative": [
+        "Summarize the plot of Moby Dick in two sentences.",
+        "What is the hardest natural substance?",
+        "Teach me a simple card trick.",
+        "How many days are in a leap year?",
+        "What language is spoken in Thailand?"
+      ]
+    },
+    "backend-engineering-excellence": {
+      "positive": [
+        "Design a domain service for order refunds with clear module boundaries.",
+        "Tune this Postgres query with indexes to hit the p95 latency budget.",
+        "Secure these endpoints with least-privilege service identity and encryption.",
+        "Model the inventory domain so each rule is independently testable.",
+        "Add structured logging with correlation IDs across these backend services."
+      ],
+      "negative": [
+        "Explain the water cycle to a child.",
+        "What is the tallest mountain in the world?",
+        "Write a birthday card message.",
+        "How many ounces in a cup?",
+        "Who invented the telephone?"
+      ]
+    },
+    "frontend-engineering-excellence": {
+      "positive": [
+        "Fix the layout shift on this product page and verify the CLS improvement.",
+        "Manage cart state across routes without reload lag or stale data.",
+        "Improve the largest contentful paint of this landing page under slow networks.",
+        "Add error boundaries so a failing widget never blanks the whole page.",
+        "Verify this checkout flow renders correctly across major browsers."
+      ],
+      "negative": [
+        "Describe the life cycle of a butterfly.",
+        "What is the capital of Australia?",
+        "Recommend a good breakfast smoothie.",
+        "How many seconds are in an hour?",
+        "Name three string instruments."
+      ]
+    },
+    "human-centric-visual-excellence": {
+      "positive": [
+        "Polish this dashboard with a modular type scale and calmer visual hierarchy.",
+        "Design micro-interactions with organic easing for this onboarding flow.",
+        "Refine the spacing and whitespace rhythm of this settings page.",
+        "Align this palette to trust and comfort with validated contrast ratios.",
+        "Elevate this interface toward a luxury feel without hurting readability."
+      ],
+      "negative": [
+        "Explain how volcanoes erupt.",
+        "What is the smallest prime number?",
+        "Write a thank-you note for a gift.",
+        "How many colors are in a rainbow?",
+        "Who wrote the novel 1984?"
+      ]
+    },
+    "accessibility-inclusive-design": {
+      "positive": [
+        "Audit this form for WCAG 2.1 AA compliance including labels and error text.",
+        "Fix the ARIA roles on this custom dropdown and verify with a screen reader.",
+        "Check color contrast on this dashboard and propose compliant alternatives.",
+        "Enable full keyboard navigation with visible focus for this modal dialog.",
+        "Review this data table for screen-reader announcements and header semantics."
+      ],
+      "negative": [
+        "Explain how bees make honey.",
+        "What is the longest river in the world?",
+        "Share a bedtime story idea.",
+        "How many legs does a spider have?",
+        "What is the currency of Japan?"
+      ]
+    },
+    "continuous-observability-telemetry": {
+      "positive": [
+        "Instrument this checkout service with OpenTelemetry tracing across gateway and workers.",
+        "Define SLOs and alert thresholds for payment latency and error budget burn.",
+        "Add structured logs with correlation IDs to diagnose production incidents faster.",
+        "Monitor production health for this release with burn-rate dashboards.",
+        "Trace this distributed timeout from frontend click to database query."
+      ],
+      "negative": [
+        "Describe how clouds form.",
+        "Who was the first person on the moon?",
+        "Give me a cookie recipe.",
+        "What is 9 times 7?",
+        "Name three desert animals."
+      ]
+    },
+    "task-orchestrator": {
+      "positive": [
+        "Route this task to the best skill and orchestrate the workflow automatically.",
+        "Which capability should handle this request? Choose without a slash command.",
+        "Rute tugasku ke skill terbaik dan orkestrasi alur kerjanya.",
+        "Auto select the right skills for this multi-capability task.",
+        "Tolong pilihkan skill yang menangani permintaan multi-kemampuan ini."
+      ],
+      "negative": [
+        "What is the boiling point of water?",
+        "Who painted the Mona Lisa?",
+        "Give me a sandwich recipe for lunch.",
+        "What is 12 times 12?",
+        "Jelaskan fotosintesis untuk anak sekolah dasar."
+      ]
+    }
+  }
+}

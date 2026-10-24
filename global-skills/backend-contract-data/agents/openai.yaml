@@ -1,0 +1,6 @@
+interface:
+  display_name: "Backend Contract and Data"
+  short_description: "Safely evolve APIs and data"
+  default_prompt: "Use $backend-contract-data to evolve this API or data path safely."
+policy:
+  allow_implicit_invocation: true

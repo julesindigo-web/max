@@ -1,0 +1,16 @@
+{
+  "browser": {
+    "browserName": "chromium",
+    "isolated": true,
+    "launchOptions": {
+      "chromiumSandbox": true
+    }
+  },
+  "capabilities": [
+    "core",
+    "core-navigation",
+    "core-tabs",
+    "core-input"
+  ],
+  "saveSession": false
+}

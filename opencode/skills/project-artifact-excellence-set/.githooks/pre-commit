@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Local fast-fail guard; CI remains the authoritative required check.
+set -euo pipefail
+ROOT="$(git rev-parse --show-toplevel)"
+exec bash "$ROOT/validation/validate-set.sh" "$ROOT"

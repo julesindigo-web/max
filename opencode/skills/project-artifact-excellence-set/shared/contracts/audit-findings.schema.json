@@ -1,0 +1,261 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "audit-findings.schema.json",
+  "title": "Audit Findings Event v1 (calibration-capable input contract)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "audit_id",
+    "audited_at",
+    "project",
+    "findings"
+  ],
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "1.0",
+        "1.1"
+      ]
+    },
+    "audit_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "audited_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "project": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "findings": {
+      "type": "array",
+      "maxItems": 500,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "category",
+          "severity",
+          "status",
+          "evidence",
+          "source_artifact",
+          "recurrence_count"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          },
+          "category": {
+            "enum": [
+              "project.requirements",
+              "project.architecture",
+              "project.fullstack-e2e",
+              "project.security",
+              "project.reliability-operations",
+              "project.traceability",
+              "project.human-factors",
+              "skill.trigger",
+              "skill.validation",
+              "skill.metrics",
+              "skill.composition",
+              "skill.human-factors",
+              "cross-cutting"
+            ]
+          },
+          "severity": {
+            "enum": [
+              "Critical",
+              "Major",
+              "Minor",
+              "Suggestion"
+            ]
+          },
+          "status": {
+            "enum": [
+              "open",
+              "in_progress",
+              "resolved",
+              "accepted-risk",
+              "deferred",
+              "suppressed"
+            ]
+          },
+          "evidence": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "source_artifact": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          },
+          "recurrence_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "skill_gap_suspected": {
+            "type": "boolean",
+            "default": false
+          },
+          "related_metrics": {
+            "type": "array",
+            "maxItems": 20,
+            "items": {
+              "type": "string",
+              "maxLength": 128
+            }
+          },
+          "recurrence_observation_ids": {
+            "type": "array",
+            "description": "Distinct audit IDs including the current audit; recurrence must never be inferred from a count alone.",
+            "uniqueItems": true,
+            "maxItems": 100,
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+            }
+          },
+          "evidence_status": {
+            "enum": [
+              "verified",
+              "inference",
+              "unknown_untested",
+              "contradicted",
+              "not_applicable"
+            ]
+          },
+          "confidence": {
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "verification_method": {
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 500
+          },
+          "as_of_context": {
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 250
+          },
+          "impact_rationale": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 1000
+          },
+          "severity_basis": {
+            "enum": [
+              "observed_impact",
+              "mandatory_control_gap",
+              "conditional_risk",
+              "limited_impact",
+              "improvement_only"
+            ]
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "evidence_status": {
+                  "const": "unknown_untested"
+                },
+                "severity": {
+                  "enum": [
+                    "Critical",
+                    "Major"
+                  ]
+                }
+              },
+              "required": [
+                "evidence_status",
+                "severity"
+              ]
+            },
+            "then": {
+              "properties": {
+                "severity_basis": {
+                  "const": "conditional_risk"
+                },
+                "impact_rationale": {
+                  "pattern": "([iI][fF]|[cC][oO][uU][lL][dD]|[mM][aA][yY]|[mM][iI][gG][hH][tT]|[wW][hH][eE][nN]|[uU][nN][lL][eE][sS][sS]|[cC][oO][nN][dD][iI][tT][iI][oO][nN][aA][lL]|[pP][oO][tT][eE][nN][tT][iI][aA][lL][lL][yY])"
+                }
+              },
+              "required": [
+                "severity_basis",
+                "impact_rationale"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "evidence_status": {
+                  "const": "not_applicable"
+                },
+                "severity": {
+                  "enum": [
+                    "Critical",
+                    "Major"
+                  ]
+                }
+              },
+              "required": [
+                "evidence_status",
+                "severity"
+              ]
+            },
+            "then": false
+          }
+        ]
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "schema_version": {
+            "const": "1.1"
+          }
+        },
+        "required": [
+          "schema_version"
+        ]
+      },
+      "then": {
+        "properties": {
+          "findings": {
+            "items": {
+              "required": [
+                "evidence_status",
+                "confidence",
+                "verification_method",
+                "as_of_context",
+                "impact_rationale",
+                "severity_basis"
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

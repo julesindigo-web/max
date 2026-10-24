@@ -1,0 +1,72 @@
+name: Validate project-artifact excellence skill set
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-skills-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Run mandatory 8-gate validation (members, metrics, matrix, ledger, links, context)
+        run: bash validation/validate-set.sh
+      - name: Score trigger coverage and context budgets (masterpiece gates)
+        run: |
+          set -euo pipefail
+          python3 scripts/run-trigger-evaluation.py --matrix evaluation/trigger-evaluation-matrix.json
+          python3 validation/validate_task_ledger.py .
+          python3 scripts/check-links-toc.py --root .
+          python3 scripts/measure-context.py --root . --budget-lines 500
+
+      - name: Normalize audit findings into skill-evaluation requests
+        env:
+          PYTHONUNBUFFERED: "1"
+        shell: bash
+        run: |
+          set -euo pipefail
+          out_dir="$RUNNER_TEMP/audit-feedback-requests"
+          mkdir -p "$out_dir"
+          shopt -s nullglob
+          inputs=(audit-feedback/inbox/*.json)
+          if (( ${#inputs[@]} == 0 )); then
+            echo "No audit feedback events in audit-feedback/inbox/." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          index=0
+          for input in "${inputs[@]}"; do
+            index=$((index + 1))
+            output="$out_dir/request-${index}.json"
+            python3 skills-create-excellence/scripts/process-audit-feedback.py "$input" "$output"
+            python3 - "$output" "$GITHUB_STEP_SUMMARY" <<'PY'
+          import json, sys
+          from pathlib import Path
+          payload = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
+          summary = Path(sys.argv[2])
+          with summary.open("a", encoding="utf-8") as stream:
+              stream.write(f"\n### Audit feedback: {payload['audit_id']}\n")
+              stream.write(f"Findings: {payload['processing_summary']['findings_seen']} · Requests: {payload['processing_summary']['requests_generated']}\n\n")
+              for request in payload["requests"]:
+                  stream.write(f"- `{request['request_id']}` — `{request['target_skill']}` / {request['priority']} (human review required)\n")
+          PY
+          done
+
+      - name: Publish evaluation-request payloads
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: skill-evaluation-requests
+          path: ${{ runner.temp }}/audit-feedback-requests/
+          if-no-files-found: ignore
+          retention-days: 14

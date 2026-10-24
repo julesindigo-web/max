@@ -1,0 +1,6 @@
+interface:
+  display_name: "Full-stack Change"
+  short_description: "Implement scoped cross-tier changes"
+  default_prompt: "Use $fullstack-change to implement this cross-tier outcome with focused verification."
+policy:
+  allow_implicit_invocation: true

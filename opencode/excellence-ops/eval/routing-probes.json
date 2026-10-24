@@ -1,0 +1,584 @@
+{
+  "description": "Frozen routing probe set for excellence-ops subagents and commands. Deterministic hygiene only (no LLM). Each group carries 5 positive and 5 negative utterances including Indonesian and near-miss cases.",
+  "groups": [
+    "auditor",
+    "new-skill",
+    "skill-builder",
+    "test-runner",
+    "audit",
+    "validate-set"
+  ],
+  "probes": [
+    {
+      "expect": "audit",
+      "family": "standard",
+      "group": "auditor",
+      "id": "auditor-pos-01",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "Audit the payment API design for security and reliability gaps"
+    },
+    {
+      "expect": "audit",
+      "family": "standard",
+      "group": "auditor",
+      "id": "auditor-pos-02",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "Review this PRD against the full lifecycle from discovery to operations"
+    },
+    {
+      "expect": "audit",
+      "family": "indonesian",
+      "group": "auditor",
+      "id": "auditor-pos-03",
+      "lang": "id",
+      "polarity": "positive",
+      "text": "Lakukan audit arsitektur layanan pembayaran dan kutip temuannya"
+    },
+    {
+      "expect": "audit",
+      "family": "near-miss",
+      "group": "auditor",
+      "id": "auditor-pos-04",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "Is my test coverage an audit risk for the checkout flow?"
+    },
+    {
+      "expect": "audit",
+      "family": "standard",
+      "group": "auditor",
+      "id": "auditor-pos-05",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "Critique this DevOps pipeline proposal with severity bases"
+    },
+    {
+      "expect": "other",
+      "family": "standard",
+      "group": "auditor",
+      "id": "auditor-neg-01",
+      "lang": "en",
+      "notTarget": "auditor",
+      "polarity": "negative",
+      "text": "Write unit tests for the auth module"
+    },
+    {
+      "expect": "other",
+      "family": "standard",
+      "group": "auditor",
+      "id": "auditor-neg-02",
+      "lang": "en",
+      "notTarget": "auditor",
+      "polarity": "negative",
+      "text": "Create a new skill for rate limiting"
+    },
+    {
+      "expect": "other",
+      "family": "indonesian",
+      "group": "auditor",
+      "id": "auditor-neg-03",
+      "lang": "id",
+      "notTarget": "auditor",
+      "polarity": "negative",
+      "text": "Jalankan pengujian E2E untuk alur checkout sekarang"
+    },
+    {
+      "expect": "other",
+      "family": "near-miss",
+      "group": "auditor",
+      "id": "auditor-neg-04",
+      "lang": "en",
+      "notTarget": "auditor",
+      "polarity": "negative",
+      "text": "Audit my lunch menu for taste"
+    },
+    {
+      "expect": "other",
+      "family": "standard",
+      "group": "auditor",
+      "id": "auditor-neg-05",
+      "lang": "en",
+      "notTarget": "auditor",
+      "polarity": "negative",
+      "text": "Deploy the staging pipeline with Docker"
+    },
+    {
+      "expect": "skill-builder",
+      "family": "standard",
+      "group": "skill-builder",
+      "id": "skill-builder-pos-01",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "Create a new skill for backend rate limiting with measurable metrics"
+    },
+    {
+      "expect": "skill-builder",
+      "family": "standard",
+      "group": "skill-builder",
+      "id": "skill-builder-pos-02",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "Upgrade the accessibility skill to excellence standard with validation"
+    },
+    {
+      "expect": "skill-builder",
+      "family": "indonesian",
+      "group": "skill-builder",
+      "id": "skill-builder-pos-03",
+      "lang": "id",
+      "polarity": "positive",
+      "text": "Buatkan skill baru untuk validasi kontrak API beserta metriksnya"
+    },
+    {
+      "expect": "skill-builder",
+      "family": "near-miss",
+      "group": "skill-builder",
+      "id": "skill-builder-pos-04",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "Create a plugin set manifest with composition contracts"
+    },
+    {
+      "expect": "skill-builder",
+      "family": "standard",
+      "group": "skill-builder",
+      "id": "skill-builder-pos-05",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "Draft an agent spec with success metrics and failure modes"
+    },
+    {
+      "expect": "other",
+      "family": "standard",
+      "group": "skill-builder",
+      "id": "skill-builder-neg-01",
+      "lang": "en",
+      "notTarget": "skill-builder",
+      "polarity": "negative",
+      "text": "Audit the checkout PRD for compliance gaps"
+    },
+    {
+      "expect": "other",
+      "family": "standard",
+      "group": "skill-builder",
+      "id": "skill-builder-neg-02",
+      "lang": "en",
+      "notTarget": "skill-builder",
+      "polarity": "negative",
+      "text": "Run the full test suite and report coverage"
+    },
+    {
+      "expect": "other",
+      "family": "indonesian",
+      "group": "skill-builder",
+      "id": "skill-builder-neg-03",
+      "lang": "id",
+      "notTarget": "skill-builder",
+      "polarity": "negative",
+      "text": "Tolong audit keamanan endpoint login ini"
+    },
+    {
+      "expect": "other",
+      "family": "near-miss",
+      "group": "skill-builder",
+      "id": "skill-builder-neg-04",
+      "lang": "en",
+      "notTarget": "skill-builder",
+      "polarity": "negative",
+      "text": "Create a playlist with excellent vibes"
+    },
+    {
+      "expect": "other",
+      "family": "standard",
+      "group": "skill-builder",
+      "id": "skill-builder-neg-05",
+      "lang": "en",
+      "notTarget": "skill-builder",
+      "polarity": "negative",
+      "text": "Optimize the database query latency"
+    },
+    {
+      "expect": "test-runner",
+      "family": "standard",
+      "group": "test-runner",
+      "id": "test-runner-pos-01",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "Write unit tests for the auth module with 80 percent coverage"
+    },
+    {
+      "expect": "test-runner",
+      "family": "standard",
+      "group": "test-runner",
+      "id": "test-runner-pos-02",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "Fix the flaky E2E checkout test and quarantine it with an owner"
+    },
+    {
+      "expect": "test-runner",
+      "family": "indonesian",
+      "group": "test-runner",
+      "id": "test-runner-pos-03",
+      "lang": "id",
+      "polarity": "positive",
+      "text": "Buatkan suite E2E untuk alur pembayaran dan laporkan stabilitasnya"
+    },
+    {
+      "expect": "test-runner",
+      "family": "near-miss",
+      "group": "test-runner",
+      "id": "test-runner-pos-04",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "Generate a coverage report and map it to quality metrics"
+    },
+    {
+      "expect": "test-runner",
+      "family": "standard",
+      "group": "test-runner",
+      "id": "test-runner-pos-05",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "Stabilize the Playwright suite and harden the CI gate"
+    },
+    {
+      "expect": "other",
+      "family": "standard",
+      "group": "test-runner",
+      "id": "test-runner-neg-01",
+      "lang": "en",
+      "notTarget": "test-runner",
+      "polarity": "negative",
+      "text": "Review the system architecture for scaling risks"
+    },
+    {
+      "expect": "other",
+      "family": "standard",
+      "group": "test-runner",
+      "id": "test-runner-neg-02",
+      "lang": "en",
+      "notTarget": "test-runner",
+      "polarity": "negative",
+      "text": "Design a new agent spec for code review"
+    },
+    {
+      "expect": "other",
+      "family": "indonesian",
+      "group": "test-runner",
+      "id": "test-runner-neg-03",
+      "lang": "id",
+      "notTarget": "test-runner",
+      "polarity": "negative",
+      "text": "Buatkan skill dokumentasi API dengan contoh kontrak"
+    },
+    {
+      "expect": "other",
+      "family": "near-miss",
+      "group": "test-runner",
+      "id": "test-runner-neg-04",
+      "lang": "en",
+      "notTarget": "test-runner",
+      "polarity": "negative",
+      "text": "Test my patience with excellent latency jokes"
+    },
+    {
+      "expect": "other",
+      "family": "standard",
+      "group": "test-runner",
+      "id": "test-runner-neg-05",
+      "lang": "en",
+      "notTarget": "test-runner",
+      "polarity": "negative",
+      "text": "Containerize the API with a secure Dockerfile"
+    },
+    {
+      "expect": "audit",
+      "family": "standard",
+      "group": "audit",
+      "id": "audit-pos-01",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "/audit docs/PRD.md for lifecycle gaps and remediations"
+    },
+    {
+      "expect": "audit",
+      "family": "standard",
+      "group": "audit",
+      "id": "audit-pos-02",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "/audit src/auth/ with evidence states per finding"
+    },
+    {
+      "expect": "audit",
+      "family": "indonesian",
+      "group": "audit",
+      "id": "audit-pos-03",
+      "lang": "id",
+      "polarity": "positive",
+      "text": "/audit audit arsitektur layanan pembayaran beserta bukti kutipannya"
+    },
+    {
+      "expect": "audit",
+      "family": "near-miss",
+      "group": "audit",
+      "id": "audit-pos-04",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "Run a calibrated audit of the checkout flow"
+    },
+    {
+      "expect": "audit",
+      "family": "standard",
+      "group": "audit",
+      "id": "audit-pos-05",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "/audit the deployment pipeline proposal"
+    },
+    {
+      "expect": "other",
+      "family": "standard",
+      "group": "audit",
+      "id": "audit-neg-01",
+      "lang": "en",
+      "notTarget": "audit",
+      "polarity": "negative",
+      "text": "Execute the 8-gate set validation suite"
+    },
+    {
+      "expect": "other",
+      "family": "standard",
+      "group": "audit",
+      "id": "audit-neg-02",
+      "lang": "en",
+      "notTarget": "audit",
+      "polarity": "negative",
+      "text": "Create a skill for session timeout handling"
+    },
+    {
+      "expect": "other",
+      "family": "indonesian",
+      "group": "audit",
+      "id": "audit-neg-03",
+      "lang": "id",
+      "notTarget": "audit",
+      "polarity": "negative",
+      "text": "/validate-set untuk set kanonis yang terpasang"
+    },
+    {
+      "expect": "other",
+      "family": "near-miss",
+      "group": "audit",
+      "id": "audit-neg-04",
+      "lang": "en",
+      "notTarget": "audit",
+      "polarity": "negative",
+      "text": "Auditory processing of sound design"
+    },
+    {
+      "expect": "other",
+      "family": "standard",
+      "group": "audit",
+      "id": "audit-neg-05",
+      "lang": "en",
+      "notTarget": "audit",
+      "polarity": "negative",
+      "text": "Generate API docs from the OpenAPI spec"
+    },
+    {
+      "expect": "new-skill",
+      "family": "standard",
+      "group": "new-skill",
+      "id": "new-skill-pos-01",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "/new-skill rate-limiting for backend APIs"
+    },
+    {
+      "expect": "new-skill",
+      "family": "standard",
+      "group": "new-skill",
+      "id": "new-skill-pos-02",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "/new-skill accessibility checklist for checkout flow"
+    },
+    {
+      "expect": "new-skill",
+      "family": "indonesian",
+      "group": "new-skill",
+      "id": "new-skill-pos-03",
+      "lang": "id",
+      "polarity": "positive",
+      "text": "/new-skill skill validasi kontrak API dengan metrik keberhasilan"
+    },
+    {
+      "expect": "new-skill",
+      "family": "near-miss",
+      "group": "new-skill",
+      "id": "new-skill-pos-04",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "Create an excellence-level skill package for retries"
+    },
+    {
+      "expect": "new-skill",
+      "family": "standard",
+      "group": "new-skill",
+      "id": "new-skill-pos-05",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "/new-skill token-bucket plugin with regression fixtures"
+    },
+    {
+      "expect": "other",
+      "family": "standard",
+      "group": "new-skill",
+      "id": "new-skill-neg-01",
+      "lang": "en",
+      "notTarget": "new-skill",
+      "polarity": "negative",
+      "text": "/audit the auth module for OWASP gaps"
+    },
+    {
+      "expect": "other",
+      "family": "standard",
+      "group": "new-skill",
+      "id": "new-skill-neg-02",
+      "lang": "en",
+      "notTarget": "new-skill",
+      "polarity": "negative",
+      "text": "Prove coverage for the payment journeys"
+    },
+    {
+      "expect": "other",
+      "family": "indonesian",
+      "group": "new-skill",
+      "id": "new-skill-neg-03",
+      "lang": "id",
+      "notTarget": "new-skill",
+      "polarity": "negative",
+      "text": "/audit laporan keamanan API untuk temuan kritis"
+    },
+    {
+      "expect": "other",
+      "family": "near-miss",
+      "group": "new-skill",
+      "id": "new-skill-neg-04",
+      "lang": "en",
+      "notTarget": "new-skill",
+      "polarity": "negative",
+      "text": "New kitchen skills for excellent plating"
+    },
+    {
+      "expect": "other",
+      "family": "standard",
+      "group": "new-skill",
+      "id": "new-skill-neg-05",
+      "lang": "en",
+      "notTarget": "new-skill",
+      "polarity": "negative",
+      "text": "Sync the architecture docs after the refactor"
+    },
+    {
+      "expect": "validate-set",
+      "family": "standard",
+      "group": "validate-set",
+      "id": "validate-set-pos-01",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "/validate-set for the installed excellence set"
+    },
+    {
+      "expect": "validate-set",
+      "family": "standard",
+      "group": "validate-set",
+      "id": "validate-set-pos-02",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "Run the full 8-gate skill-set validation and report verdicts"
+    },
+    {
+      "expect": "validate-set",
+      "family": "indonesian",
+      "group": "validate-set",
+      "id": "validate-set-pos-03",
+      "lang": "id",
+      "polarity": "positive",
+      "text": "/validate-set untuk set kanonis yang terpasang dan laporkan hasilnya"
+    },
+    {
+      "expect": "validate-set",
+      "family": "near-miss",
+      "group": "validate-set",
+      "id": "validate-set-pos-04",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "Validate the set contracts after editing manifest.yaml"
+    },
+    {
+      "expect": "validate-set",
+      "family": "standard",
+      "group": "validate-set",
+      "id": "validate-set-pos-05",
+      "lang": "en",
+      "polarity": "positive",
+      "text": "/validate-set ~/.config/opencode/skill-sets/project-artifact-excellence-set"
+    },
+    {
+      "expect": "other",
+      "family": "standard",
+      "group": "validate-set",
+      "id": "validate-set-neg-01",
+      "lang": "en",
+      "notTarget": "validate-set",
+      "polarity": "negative",
+      "text": "Audit the PRD for traceability gaps"
+    },
+    {
+      "expect": "other",
+      "family": "standard",
+      "group": "validate-set",
+      "id": "validate-set-neg-02",
+      "lang": "en",
+      "notTarget": "validate-set",
+      "polarity": "negative",
+      "text": "Upgrade the visual excellence skill"
+    },
+    {
+      "expect": "other",
+      "family": "indonesian",
+      "group": "validate-set",
+      "id": "validate-set-neg-03",
+      "lang": "id",
+      "notTarget": "validate-set",
+      "polarity": "negative",
+      "text": "Buatkan pengujian E2E untuk modul pembayaran"
+    },
+    {
+      "expect": "other",
+      "family": "near-miss",
+      "group": "validate-set",
+      "id": "validate-set-neg-04",
+      "lang": "en",
+      "notTarget": "validate-set",
+      "polarity": "negative",
+      "text": "Validate my parking ticket set for discounts"
+    },
+    {
+      "expect": "other",
+      "family": "standard",
+      "group": "validate-set",
+      "id": "validate-set-neg-05",
+      "lang": "en",
+      "notTarget": "validate-set",
+      "polarity": "negative",
+      "text": "Instrument tracing for the checkout service"
+    }
+  ],
+  "version": "2.2.0"
+}

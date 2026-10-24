@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "task-evaluation-ledger.schema.json",
+  "title": "Task Evaluation Ledger Contract v1",
+  "description": "Versioned representative task-evaluation record. Structure gate only; task success requires independent evidence per task.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "as_of",
+    "tasks"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "as_of": {
+      "type": "string",
+      "format": "date"
+    },
+    "tasks": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 50,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "skill",
+          "task",
+          "acceptance",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "skill": {
+            "enum": [
+              "project-artifact-auditor",
+              "skills-create-excellence",
+              "set"
+            ]
+          },
+          "task": {
+            "type": "string",
+            "minLength": 20
+          },
+          "acceptance": {
+            "type": "string",
+            "minLength": 20
+          },
+          "status": {
+            "enum": [
+              "planned",
+              "passed",
+              "failed",
+              "waived"
+            ]
+          },
+          "evidence": {
+            "type": "string"
+          },
+          "measured_at": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

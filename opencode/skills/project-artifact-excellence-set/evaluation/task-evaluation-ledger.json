@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-10-15",
+  "tasks": [
+    {
+      "id": "task-audit-prd",
+      "skill": "project-artifact-auditor",
+      "task": "Audit a sample PRD+SRS pair and produce a calibrated report with findings matrix, severity bases, and remediation backlog.",
+      "acceptance": "Report contains evidence-state per finding, at least 5 dimensions assessed, and a prioritized backlog; reviewer accepts structure.",
+      "status": "planned",
+      "evidence": "To be recorded on first runtime evaluation per evaluation/runtime-protocol.md.",
+      "measured_at": ""
+    },
+    {
+      "id": "task-audit-arch",
+      "skill": "project-artifact-auditor",
+      "task": "Audit a sample architecture+API contract set for threat model, SLOs, traceability, and recovery coverage.",
+      "acceptance": "Threat-model, SLO, traceability, and recovery gaps each have a finding with verification method and residual risk.",
+      "status": "planned",
+      "evidence": "",
+      "measured_at": ""
+    },
+    {
+      "id": "task-create-skill",
+      "skill": "skills-create-excellence",
+      "task": "Create a new valid skill from the starter brief within 60 minutes including trigger matrix deltas and regression fixture.",
+      "acceptance": "validate-excellence.sh passes, 5 metric dimensions present with 10 fields each, and at least 1 positive + 1 negative fixture added.",
+      "status": "planned",
+      "evidence": "",
+      "measured_at": ""
+    },
+    {
+      "id": "task-upgrade-set",
+      "skill": "set",
+      "task": "Upgrade the integrated set core to v2.0.0 with all 8 validation gates passing and no member regression.",
+      "acceptance": "Full validate-set.sh passes 8/8; manifest versions match frontmatter; trigger matrix covers all 13 members.",
+      "status": "planned",
+      "evidence": "",
+      "measured_at": ""
+    },
+    {
+      "id": "task-secure-review",
+      "skill": "skills-create-excellence",
+      "task": "Run a bounded security review with security-vulnerability-auditor emitting contract-normalized findings.",
+      "acceptance": "OWASP categories plus secrets and dependency checks covered with cited evidence per verdict.",
+      "status": "planned",
+      "evidence": "",
+      "measured_at": ""
+    },
+    {
+      "id": "task-test-gen",
+      "skill": "set",
+      "task": "Generate a multi-tier test suite with test-automation-engineer for a sample module with coverage report.",
+      "acceptance": "Unit plus integration plus one E2E flow passing with coverage report and zero known flakes.",
+      "status": "planned",
+      "evidence": "",
+      "measured_at": ""
+    },
+    {
+      "id": "task-feedback-loop",
+      "skill": "set",
+      "task": "Process a recurrent audit finding through the feedback inbox into a reviewed evaluation request without auto-editing production skills.",
+      "acceptance": "Deterministic request generated with human-approval flag true and production SKILL.md untouched.",
+      "status": "planned",
+      "evidence": "",
+      "measured_at": ""
+    }
+  ]
+}

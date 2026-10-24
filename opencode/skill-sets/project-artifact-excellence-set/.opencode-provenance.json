@@ -1,0 +1,38 @@
+{
+  "source_repository": "https://github.com/julesindigo-web/project-blueprint.git",
+  "source_commit": "22f753fc016cd05312cea81ef404882513bd3e7c",
+  "source_artifact": "project-artifact-excellence-skill-set-enhanced.zip",
+  "source_artifact_sha256": "7c4e859b3765935c005264048a378f02320612ed65dbfcb1335d4bc0eb2128f1",
+  "source_artifact_bytes": 95297,
+  "set_name": "project-artifact-excellence-set",
+  "set_version": "2.0.0",
+  "members": [
+    "project-artifact-auditor@2.0.0",
+    "skills-create-excellence@2.0.0",
+    "code-refactoring-optimizer@1.0.0",
+    "security-vulnerability-auditor@1.0.0",
+    "test-automation-engineer@1.0.0",
+    "architecture-documentation-generator@1.0.0",
+    "accessibility-inclusive-design@1.0.0",
+    "continuous-observability-telemetry@1.0.0",
+    "backend-engineering-excellence@1.0.0",
+    "frontend-engineering-excellence@1.0.0",
+    "human-centric-visual-excellence@1.0.0",
+    "deployment-devops-orchestrator@1.0.0",
+    "fullstack-e2e-mastery@1.0.0"
+  ],
+  "expansion_blueprint": "Masterpiece integration v2.0.0: core 2.0.0 hardening plus ten-field metric standardization across all domain members, 228-case trigger matrix (114+114, SHA 2ba1f166afde7bcd0963b6e7cb818a5f87139da5c5a301f378ee891a207dc02d as of 2026-10-15), 7-task ledger, 8-gate validation, TRACEABILITY, docs, ID aliases, deterministic release.",
+  "expanded_at_utc": "2026-10-15",
+  "expanded_by_opencode_version": "1.18.31",
+  "canonical_source_path": "/root/.config/opencode/skill-sets/project-artifact-excellence-set",
+  "runtime_path": "/root/.config/opencode/skills/project-artifact-excellence-set",
+  "runtime_exclusions": [
+    "skills-create-excellence/scripts/tests/**",
+    ".github/**",
+    ".githooks/**"
+  ],
+  "runtime_exclusion_rationale": "Test fixtures under scripts/tests/fixtures/*/SKILL.md would be auto-discovered as phantom skills because opencode scans skills/ recursively for **/SKILL.md (verified empirically on 1.18.31 via tmp-set/nested and 5-level fixture test). Canonical source retains full fixtures for validation; runtime omits the entire scripts/tests tree so only the 13 production SKILL.md files are discovered. Validation/tests/*.py contain no SKILL.md and are safe to keep in runtime. .github/ and .githooks/ are repo CI plumbing with no runtime role and are canonical-only.",
+  "relative_path_contract": "Runtime preserves set-root layout (all member dirs plus shared/, validation/, manifest.yaml, SET.md as siblings) so ../shared/*, ../../shared/*, ../manifest.yaml and ../validation/* references resolve identically to canonical source.",
+  "validation_on_canonical_source": "bash validation/validate-set.sh must pass 8/8 gates after restoring +x bits. Re-run after any update.",
+  "config_note": "No opencode.jsonc change required: ~/.config/opencode/skills/*/SKILL.md (recursive) is auto-loaded. Do not add skills.paths unless moving the set. If added, use new array form per https://opencode.ai/config.json (skills: [\"/abs/path\"]); object form {paths,urls} is deprecated."
+}

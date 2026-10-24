@@ -1,0 +1,6 @@
+interface:
+  display_name: "Sensitive Change Safety"
+  short_description: "Harden sensitive product changes"
+  default_prompt: "Use $sensitive-change-safety to assess and harden this sensitive change."
+policy:
+  allow_implicit_invocation: true

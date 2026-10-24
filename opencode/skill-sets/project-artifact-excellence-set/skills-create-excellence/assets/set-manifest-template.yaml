@@ -1,0 +1,34 @@
+name: example-skill-set
+version: "1.0.0"
+purpose: State the higher-order capability and target users for the composed skills.
+last-reviewed: "YYYY-MM-DD"
+success-metrics:
+  - "Trigger performance: ≥90% true positives and ≤10% false positives on at least five positive and five negative prompts"
+  - "Task completion: ≥95% applicable acceptance checks pass on a representative evaluation set"
+  - "Context-token efficiency: each member SKILL.md remains ≤500 lines and only relevant references are loaded"
+  - "Time-to-working-skill: first structurally valid and tested result within ≤60 minutes in a defined guided evaluation"
+  - "Residual defect density: zero known open Critical or Major findings at release unless risk acceptance is documented"
+members:
+  - name: skill-a
+    version: "1.0.0"
+    path: skills/skill-a
+    depends-on: []
+    provides:
+      - capability-a/v1
+  - name: skill-b
+    version: "1.0.0"
+    path: skills/skill-b
+    depends-on:
+      - skill-a
+    provides:
+      - capability-b/v1
+composition-rules:
+  - Dependencies must form an acyclic directed graph.
+  - Shared contracts are authoritative; do not duplicate schemas across members.
+  - Feedback requests require review and never directly mutate production skill files.
+shared-contracts:
+  - shared/contracts/example-contract.schema.json
+  - shared/contracts/skill-set-manifest.schema.json
+validation-entry: validation/validate-set.sh
+deprecation-policy: State how long deprecated members/contracts remain compatible and when support ends.
+migration-notes: Record breaking changes and required consumer steps, or write none explicitly.

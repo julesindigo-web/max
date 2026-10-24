@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.1",
+  "audit_id": "AUD-2026-10-15-001",
+  "audited_at": "2026-10-15T00:00:00Z",
+  "project": "sample-project",
+  "findings": [
+    {
+      "id": "AUD-012",
+      "title": "Repeated ambiguity in acceptance criteria",
+      "category": "project.requirements",
+      "severity": "Major",
+      "status": "open",
+      "evidence": "Three reviewed stories omit observable pass/fail outcomes; the pattern appeared in two successive audits.",
+      "source_artifact": "product/backlog.md#US-24",
+      "recurrence_count": 2,
+      "skill_gap_suspected": true,
+      "related_metrics": [
+        "traceability_coverage",
+        "acceptance_criteria_testability"
+      ],
+      "recurrence_observation_ids": [
+        "AUD-2026-10-08-002",
+        "AUD-2026-10-15-001"
+      ],
+      "evidence_status": "verified",
+      "confidence": "high",
+      "verification_method": "Inspected three story records and compared with the acceptance-criteria checklist; recurrence IDs link two separate audits.",
+      "as_of_context": "Audit performed 2026-10-15; reviewed backlog state captured at audit time.",
+      "impact_rationale": "Missing pass/fail criteria prevent reliable acceptance decisions and weaken requirement-to-test traceability.",
+      "severity_basis": "observed_impact"
+    },
+    {
+      "id": "AUD-013",
+      "title": "One-off project-specific label mismatch",
+      "category": "project.traceability",
+      "severity": "Minor",
+      "status": "open",
+      "evidence": "One design label uses an obsolete requirement identifier.",
+      "source_artifact": "design/flow.md#step-4",
+      "recurrence_count": 1,
+      "skill_gap_suspected": false,
+      "recurrence_observation_ids": [
+        "AUD-2026-10-15-001"
+      ],
+      "evidence_status": "verified",
+      "confidence": "high",
+      "verification_method": "Compared the design flow label directly with the current requirement identifier in the traceability index.",
+      "as_of_context": "Single design artifact reviewed during audit 2026-10-15.",
+      "impact_rationale": "The isolated stale label creates a limited traceability defect without demonstrated wider impact.",
+      "severity_basis": "limited_impact"
+    }
+  ]
+}

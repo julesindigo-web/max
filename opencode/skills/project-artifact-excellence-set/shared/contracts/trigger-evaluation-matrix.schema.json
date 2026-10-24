@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "trigger-evaluation-matrix.schema.json",
+  "title": "Trigger Evaluation Matrix Contract",
+  "description": "Version 1.1 is the authoritative candidate test-set format. It defines expected labels but does not claim runtime observations.",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "skills"],
+      "properties": {
+        "schema_version": {"const": "1.0"},
+        "skills": {"$ref": "#/$defs/skillsV1"}
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "as_of", "evaluation_protocol", "evaluation_type", "skills"],
+      "properties": {
+        "schema_version": {"const": "1.1"},
+        "as_of": {"type": "string", "format": "date"},
+        "evaluation_protocol": {"type": "string", "minLength": 20},
+        "evaluation_type": {"const": "candidate-test-set-not-runtime-results"},
+        "skills": {"$ref": "#/$defs/skillsV11"}
+      }
+    }
+  ],
+  "$defs": {
+    "promptV1": {"type": "string", "minLength": 1},
+    "promptV11": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "prompt", "expected"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+        "prompt": {"type": "string", "minLength": 1},
+        "expected": {"enum": ["trigger", "no-trigger"]}
+      }
+    },
+    "skillsV1": {
+      "type": "object", "minProperties": 1,
+      "additionalProperties": {"$ref": "#/$defs/caseSetV1"}
+    },
+    "caseSetV1": {
+      "type": "object", "additionalProperties": false,
+      "required": ["positive", "negative"],
+      "properties": {
+        "positive": {"type": "array", "minItems": 5, "uniqueItems": true, "items": {"$ref": "#/$defs/promptV1"}},
+        "negative": {"type": "array", "minItems": 5, "uniqueItems": true, "items": {"$ref": "#/$defs/promptV1"}}
+      }
+    },
+    "skillsV11": {
+      "type": "object", "minProperties": 1,
+      "additionalProperties": {"$ref": "#/$defs/caseSetV11"}
+    },
+    "caseSetV11": {
+      "type": "object", "additionalProperties": false,
+      "required": ["positive", "negative"],
+      "properties": {
+        "positive": {"type": "array", "minItems": 5, "items": {"$ref": "#/$defs/promptV11"}},
+        "negative": {"type": "array", "minItems": 5, "items": {"$ref": "#/$defs/promptV11"}}
+      }
+    }
+  }
+}
